@@ -2,8 +2,7 @@
   <div>
     <active-element
       :topic-title="activeTopic && activeTopic.title"
-      :text="activeTopic && activeTopic.fullText"
-    ></active-element>
+      :text="activeTopic && activeTopic.fullText"></active-element>
     <knowledge-base></knowledge-base>
   </div>
 </template>
