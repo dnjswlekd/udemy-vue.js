@@ -10,13 +10,13 @@
   </div>
 </template>
 
-
 <script>
-import TheHeader from '@/components/TheHeader'
+import TheHeader from './components/TheHeader.vue';
 import BadgeList from './components/BadgeList.vue';
 import UserInfo from './components/UserInfo.vue';
+
 export default {
-  components: {
+  components:{
     TheHeader,
     BadgeList,
     UserInfo
@@ -33,7 +33,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 html {
   font-family: sans-serif;
 }

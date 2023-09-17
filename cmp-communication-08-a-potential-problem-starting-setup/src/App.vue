@@ -1,8 +1,12 @@
 <template>
   <div>
+    <div></div>
     <active-element
+      :myName="nameId"
+      @clickHandler="changeHandler"
       :topic-title="activeTopic && activeTopic.title"
-      :text="activeTopic && activeTopic.fullText"></active-element>
+      :text="activeTopic && activeTopic.fullText"
+    ></active-element>
     <knowledge-base></knowledge-base>
   </div>
 </template>
@@ -11,6 +15,8 @@
 export default {
   data() {
     return {
+      nameId: 'wonji is the best',
+      ageId: 26,
       topics: [
         {
           id: 'basics',
@@ -34,26 +40,28 @@ export default {
   provide() {
     return {
       topics: this.topics,
-      selectTopic: this.activateTopic
-    }    
+      selectTopic: this.activateTopic,
+    };
   },
   methods: {
     activateTopic(topicId) {
       this.activeTopic = this.topics.find((topic) => topic.id === topicId);
     },
+    changeHandler(){
+      this.nameId = this.ageId;
+      console.log('Vue master wonji')
+    }
   },
-  mounted(){
-    setTimeout(()=>{
+  mounted() {
+    setTimeout(() => {
       this.topics.push({
-          id: 'events',
-          title: 'Events',
-          description: 'Events are important in Vue!',
-          fullText:
-            'Events allow you to trigger code on demand!',
-
-      })
-    },3000)
-  }
+        id: 'events',
+        title: 'Events',
+        description: 'Events are important in Vue!',
+        fullText: 'Events allow you to trigger code on demand!',
+      });
+    }, 3000);
+  },
 };
 </script>
 
