@@ -1,7 +1,9 @@
 <template>
+  <teleport to='body'>
   <dialog open>
     <slot></slot>
   </dialog>
+</teleport>
 </template>
 
 <script>
