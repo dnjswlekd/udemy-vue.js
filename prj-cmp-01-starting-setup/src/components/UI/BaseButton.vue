@@ -1,5 +1,5 @@
 <template>
-  <button :type="type" :class="mode">
+  <button :class="mode">
   <!-- <base-button mode="flat"></base-button> -->
    <slot></slot>
   </button>
@@ -7,7 +7,7 @@
 
 <script>
   export default {
-    props: ['type', 'mode']
+    props: ['mode']
   }
 </script>
 
@@ -40,15 +40,14 @@ button:active {
 }
 
 .customBtn {
-  background-color: green;
-  color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  background-color: transparent;
+  color: #3a0061;
+  border: none;
   cursor: pointer;
 }
 .customBtn:hover,
 .customBtn:active {
-  background: rgb(164, 209, 164);
-  border: 1px solid rgb(164, 209, 164);
+  background: transparent;
+  border: none;
 }
 </style>
